@@ -1,27 +1,28 @@
 <?php
+require_once "../config.php";
 
-// Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
-if (!empty($_POST) AND (empty($_POST['usuario']) OR empty($_POST['senha']))) {
-    header("Location: index.php"); exit;
-}
+$email = $_POST["email"];
+$senha = md5($_POST["senha"]);
 
-// Tenta se conectar ao servidor MySQL
-mysql_connect('localhost', 'root', 'root') or trigger_error(mysql_error());
-// Tenta se conectar a um banco de dados MySQL
-mysql_select_db('usuarios') or trigger_error(mysql_error());
+$select = $pdo->prepare("SELECT senha FROM tb_usuario WHERE email = ?");
+$select->bindParam(1, $email);
+$select->execute();
 
-$email = mysql_real_escape_string($_POST['email']);
-$senha = mysql_real_escape_string($_POST['senha']);
-
-// Validação do usuário/senha digitados
-$sql = "SELECT `id`, `nome` FROM `usuarios` WHERE (`email` = '".$email ."') AND (`senha` = '". ms5($senha) ."') AND (`ativo` = 1) LIMIT 1";
-$query = mysql_query($sql);
-if (mysql_num_rows($query) != 1) {
-    // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
-    echo "Login inválido!"; exit;
+if ($select->rowCount() > 0) {
+    $row = $select->fetch(PDO::FETCH_ASSOC);
+    $senha_hash = $row["senha"];
+    
+    if ($senha === $senha_hash) {
+        header("Location: ../main_page/index.php");
+        exit;
+    } else {
+        echo "Senha incorreta. Tente novamente.";
+        echo "<br/>";
+        echo "<a href='login.php'>Voltar</a>";
+    }
 } else {
-    // Salva os dados encontados na variável $resultado
-    $resultado = mysql_fetch_assoc($query);
+    echo "Usuário não encontrado.";
+    echo "<br/>";
+    echo "<a href='login.php'>Voltar</a>";
 }
-
 ?>

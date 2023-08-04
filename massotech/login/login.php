@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div id=corpo-form>
-		<form action="../main_page/index.php" method="post">
+		<form action="../login/validacao.php" method="post">
 			<input type="email" name="email" placeholder="Email" maxlength="42" />
 			<br /> 
 			<input type="password" name="senha" placeholder="Senha" maxlength="15">
@@ -17,6 +17,6 @@
 			<a href="../cadastro/usuario_form.php">CADASTRE-SE</a>
 		</form>		
 	</div>
-	//hkjhkjhlkjhhkjhjkl
+
 </body>
 </html>
