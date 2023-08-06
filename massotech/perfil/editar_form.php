@@ -1,5 +1,5 @@
 <?php
-include_once "../config.php";
+include_once "../Config.php";
 
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
