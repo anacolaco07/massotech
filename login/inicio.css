@@ -1,0 +1,78 @@
+
+body {
+	background-image: url("fundoo.png");
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-position: center center;
+}
+
+.btn-cadastro {
+	width: 100%;
+	padding: 15px;
+	background: rgb(64, 128, 128);
+	color: #000;
+	border:2px;
+	border-radius: 10px;
+}
+
+
+.box_login {
+	width: 500px;
+	background: #51B6B6;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+.box_login .capa {
+	background: rgb(58, 125, 125);
+	height: 256px;
+	width: 100%;
+	transform: scaleY(0.225328) scaleX(1.35206);
+	transform-origin: 0 0;
+	border-radius: 10px 10px 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+	font-size: 24px;
+	color: #000;
+	text-align: center;
+	margin: 15px 0px 20px 15px;
+	font-family: 'Arial';
+	font-weight: 500;
+}
+
+form input {
+	
+	width: 95%;
+	padding: 15px;
+	border: 0;
+	border-radius: 10px;
+	margin-bottom: 15px;
+	background: rgb(58, 125, 125);
+	
+}
+
+form .btn-login {
+	width: 100%;
+	padding: 15px;
+	background: rgb(58, 125, 125);
+	color: #000;
+	margin-bottom: 15px;
+	border: 0;
+	border-radius: 10px;
+}
+
+
+.msg_error {
+	color: #FF6D6D;
+	text-align: center;
+}
