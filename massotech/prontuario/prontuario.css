@@ -1,0 +1,9 @@
+body {
+	background-image: url("prontuario.png");
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-position: center center;
+}
