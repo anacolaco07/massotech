@@ -41,30 +41,23 @@ th {
         $pacientes = $stm->fetchAll(PDO::FETCH_ASSOC);
         foreach ($pacientes as $paciente) {
             echo "<tr>";
-            echo "<td>{$paciente['nome']}</td>";
+            echo "<td>{$paciente['nome_paciente']}</td>";
             echo "<td>{$paciente['sexo']}</td>";
             echo "<td>{$paciente['idade']}</td>";
             echo "</tr>";
         }
         ?>
     </table>
+    
+
 </body>
 </html>
 
 
-// $(function() {
+<!--  $(function() {$('#chkveg').multiselect({includeSelectAllOption: true});
 
-  $('#chkveg').multiselect({
-    includeSelectAllOption: true
-  });
-
-  $('#btnget').click(function() {
-    alert($('#chkveg').val());
-  });
-});
-.multiselect-container>li>a>label {
-  padding: 4px 20px 3px 20px;
-}
+  $('#btnget').click(function() { alert($('#chkveg').val()); });});.multiselect-container>li>a>label { padding: 4px 20px 3px 20px;
+} -->
 <link href="https://unpkg.com/bootstrap@3.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
 <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
 <script src="https://unpkg.com/bootstrap@3.3.2/dist/js/bootstrap.min.js"></script>
@@ -77,9 +70,6 @@ th {
     <select id="chkveg" multiple="multiple">
       <option value="cheese">Cheese</option>
       <option value="tomatoes">Tomatoes</option>
-      <option value="mozarella">Mozzarella</option>
-      <option value="mushrooms">Mushrooms</option>
-      <option value="pepperoni">Pepperoni</option>
       <option value="onions">Onions</option>
     </select>
     
@@ -88,3 +78,5 @@ th {
     <input type="button" id="btnget" value="Get Selected Values" />
   </div>
 </form>
+
+<a href='../main_page/index.php'>Voltar</a>

@@ -20,7 +20,9 @@
 			<input type="password" name="senha" placeholder="Senha" maxlength="15"> 
 			<input type="password" name="confSenha" placeholder="Confirmar Senha">
 			<button class="btn-cadastro">CONFIRMAR</button>
+			<button class="btn-cadastro" type="submit" formaction="../login/login.php">CANCELAR</button>
 		</form>
+		
 	</div>
 </body>
 </html>

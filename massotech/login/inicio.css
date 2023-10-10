@@ -1,7 +1,7 @@
 
 body {
 	background-image: url("../Cadastro.jpg");
-	background-size: auto;
+	background-size: cover;
 	height: 100vh;
 	display: flex;
 	align-items: center;
@@ -44,7 +44,7 @@ h1 {
 
 
 
-form input {
+input {
 	
 	width: 95%;
 	padding: 15px;
@@ -56,6 +56,9 @@ form input {
 	
 }
 
+input::placeholder {
+  color: black;
+}
 
 form .btn-login {
 	
@@ -78,7 +81,7 @@ form .btn-login {
 }
 
 a{
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     text-align: center;
     display: block;
@@ -90,17 +93,17 @@ a:hover{
 
 
 ::-webkit-input-placeholder{
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 :-moz-placeholder{
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 ::-moz-placeholder{
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 :-ms-input-placeholder{
-    color: #fff;
+    color: rgb(0, 0, 0);
 }

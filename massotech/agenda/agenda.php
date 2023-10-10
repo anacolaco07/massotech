@@ -8,15 +8,14 @@
 </head>
 
 <body>
-<center>
 	<h2>Agenda</h2>
-	<form action="validacao.php" method="post">
+	<form action="../agenda/validacao.php" method="post">
 	
-	<label for="idPaciente">Id do Paciente</label>
-	<input type="number" name="idPaciente" id="idPaciente">
+	<label for="idPaciente">Nome do Paciente</label>
+	<input type="text" name="nome_paciente" id="nome_paciente">
 	<br/>
 	
-	<label for="procedimento">Serviço</label>
+	<label for="procedimento">Massagem</label>
 	<select name="procedimento">
   	<option value="valor1" selected>Massagem</option>
   	<option value="valor2">Opçao 2</option>
@@ -31,6 +30,6 @@
 	<input type="submit" value="Enviar">
 
 	</form>
-</center>
+
 </body>
 </html>

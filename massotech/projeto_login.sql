@@ -12,12 +12,12 @@ CREATE TABLE tb_usuario (
 ) ENGINE=InnoDB;
 
 CREATE TABLE tb_Paciente(
-id bigint NOT NULL AUTO_INCREMENT,
-nome varchar(255) DEFAULT NULL,
+id_paciente bigint NOT NULL AUTO_INCREMENT,
+nome_paciente varchar(255) DEFAULT NULL,
 sexo enum("feminino","masculino","outro"),
 idade int NOT NULL,
-email varchar(100) DEFAULT NULL,
-telefone varchar(20) DEFAULT NULL,
+email_paciente varchar(100) DEFAULT NULL,
+telefone_paciente varchar(20) DEFAULT NULL,
 data_nascimento date DEFAULT NULL,
 profissao varchar(255)  DEFAULT NULL,
 setor varchar(255) DEFAULT NULL,
@@ -37,15 +37,15 @@ realiza_atividade_fisica enum("sim","não"),
 qual_atividade_fisica varchar(255) DEFAULT NULL,
 qual_frequencia varchar(255) DEFAULT NULL,
 motivo_procura varchar(255) DEFAULT NULL,
-PRIMARY KEY (id)
+PRIMARY KEY (id_paciente)
 );
 
-CREATE TABLE tb_Agenda (
-  id bigint NOT NULL AUTO_INCREMENT,
+CREATE TABLE tb_Agendamento (
+  id_agendamento bigint NOT NULL AUTO_INCREMENT,
   id_paciente bigint NOT NULL,
   data_hora_agendamento datetime NOT NULL,
   procedimento varchar(50) NOT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (id_paciente) REFERENCES tb_Paciente(id),
+  PRIMARY KEY (id_agendamento),
+  FOREIGN KEY (id_paciente) REFERENCES tb_Paciente(id_paciente),
   UNIQUE KEY unique_data_hora (data_hora_agendamento)
 );

@@ -2,9 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="prontuario.css">
+<!--<link rel="stylesheet" href="prontuario.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Prontuário</title>
 </head>
@@ -18,7 +18,7 @@
 		<h2>Identificação Pessoal</h2>
 		
 		<label>Nome</label>
-		<input type="text" name="nome" value=""/>
+		<input type="text" name="nome_paciente" value=""/>
 		<br/>
 		
         <label for="sexo">Sexo</label>
@@ -146,8 +146,12 @@
 		<br/>
 		
 		<br/>
+		
 		<input type="submit" name="salvar" value="Salvar"/>
 	</form>
 	
+	<a href='../main_page/index.php'>Voltar</a>
+	<!--<?php include 'menu.php'; ?>-->
 </body>
 </html>
+

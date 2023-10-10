@@ -1,13 +1,12 @@
 <?php
 require "../Config.php";
 
-$nome = $_POST['nome'];
+$nome_paciente = $_POST['nome_paciente'];
 $sexo = $_POST['sexo'];
 $idade = $_POST['idade'];
-$email = $_POST['email'];
-$telefone = $_POST['telefone'];
+$email_paciente = $_POST['email_paciente'];
+$telefone_paciente = $_POST['telefone_paciente'];
 $data_nascimento = $_POST['data_nascimento'];
-$telefone = $_POST['telefone'];
 
 $profissao = $_POST['profissao'];
 $setor = $_POST['setor'];
@@ -30,11 +29,11 @@ $qual_frequencia = $_POST['qual_frequencia'];
 $motivo_procura = $_POST['motivo_procura'];
 
 $sql = "insert into tb_Paciente (
-             nome,
+             nome_paciente,
              sexo,
              idade,
-             email,
-             telefone,
+             email_paciente,
+             telefone_paciente,
              data_nascimento,
              profissao,
              setor,
@@ -54,11 +53,11 @@ $sql = "insert into tb_Paciente (
             qual_atividade_fisica,
             qual_frequencia,
             motivo_procura)
-        values (:nome,
+        values (:nome_paciente,
             :sexo,
             :idade,
-            :email,
-            :telefone,
+            :email_paciente,
+            :telefone_paciente,
             :data_nascimento,
             :profissao,
             :setor,
@@ -81,11 +80,11 @@ $sql = "insert into tb_Paciente (
 
 $stm = $pdo->prepare($sql);
 // anti sql injection
-$stm->execute([':nome' => $nome,
+$stm->execute([':nome_paciente' => $nome_paciente,
     ':sexo' => $sexo,
     ':idade' => $idade,
-    ':email' => $email,
-    ':telefone' => $telefone,
+    ':email_paciente' => $email_paciente,
+    ':telefone_paciente' => $telefone_paciente,
     ':data_nascimento' => $data_nascimento,
     ':profissao' => $profissao,
     ':setor' => $setor,
@@ -107,6 +106,11 @@ $stm->execute([':nome' => $nome,
     ':motivo_procura' => $motivo_procura
 ]);
 
-header("Location: ../main_page/index.php");
+
+
+
+header("Location: ../paciente/show_paciente.php");
+
+
 
 ?>

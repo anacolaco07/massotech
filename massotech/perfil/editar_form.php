@@ -30,11 +30,11 @@ $usuario = $stm->fetch(PDO::FETCH_ASSOC);
 
 <input type="hidden" name="id" value="<?php echo $usuario["id"]; ?>" />
 
-<input type="text" value="" name="nome" placeholder="Novo Nome" maxlength="40" />
+<input type="text" value="<?php echo $usuario['nome'];?>" name="nome" placeholder="Novo Nome" maxlength="40" />
 <br />
-<input type="email" value="" name="email" placeholder="Novo Email" maxlength="42" />
+<input type="email" value="<?php echo $usuario['email'];?>" name="email" placeholder="Novo Email" maxlength="42" />
 <br />
-<input type="text" value="" name="telefone" placeholder="Novo Telefone" maxlength="30">
+<input type="text" value="<?php echo $usuario['telefone'];?>" name="telefone" placeholder="Novo Telefone" maxlength="30">
 <br />
 <input type="password" name="senha" placeholder="Nova Senha" maxlength="15">
 <br />
@@ -43,7 +43,7 @@ $usuario = $stm->fetch(PDO::FETCH_ASSOC);
 <input type="submit" name="salvar" value="SALVAR" />
 </form>
 	<br/>
-	<button onclick="location.href='/crudta/listar.php'">Cancelar</button>
+	<a href='../main_page/index.php'>Voltar</a>
 </div>
 </body>
 </html>
