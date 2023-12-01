@@ -1,0 +1,129 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 0;
+	display: flex;
+  }
+
+#menu-lateral {
+	background-color: #3A7D7D;
+	height: 100%;
+	width: 265px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 20px;
+  }
+  
+  #menu-lateral a {
+	text-decoration: none;
+	color: black;
+	display: block;
+	margin-bottom: 10px;
+  }
+  
+
+#conteudo {
+	background-color: #51B6B6;
+	padding: 10px;
+	margin-left: 265px;
+	position:center;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 100px;
+  }
+  
+#conteudo input[type="text"],
+#conteudo input[type="number"],
+#conteudo input[type="date"],
+#conteudo select {
+  background-color: #3A7D7D;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 16px;
+}
+
+#conteudo option{
+	background-color: white;
+	border: none;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px 0;
+	width: 100%;
+	font-size: 16px;
+}
+
+#conteudo h2 {
+	text-align: center;
+  background-color: #51B6B6 ;
+  color: black;
+  font-size: 24px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+	text-align: center;
+	background-color: #51B6B6 ;
+	color: black;
+	font-size: 24px;
+	border-radius: 10px;
+	padding: 10px;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+  }
+
+  #botao input[type="submit"] {
+    display: inline-block;
+    width: 200px;
+    padding: 15px;
+    background: rgb(58, 125, 125);
+    color: #000;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    text-align: center;
+}
+
+#botao input[type="submit"]:hover {
+    background: #4d9e9e;
+}
+
+  #botao a {
+    display: inline-block;
+    width: 200px;
+    padding: 15px;
+    background: rgb(58, 125, 125);
+    color: #000;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    text-align: center;
+}
+
+#botao a:hover {
+    background: #4d9e9e;
+}

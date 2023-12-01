@@ -1,0 +1,36 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #51B6B6;
+}
+
+#menu-lateral {
+    background-color: #3A7D7D;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+#menu-lateral a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#conteudo {
+    background-color: #51B6B6;
+    padding: 20px;
+    margin-left: 230px;
+    height: 100%;
+    box-sizing: border-box;
+}

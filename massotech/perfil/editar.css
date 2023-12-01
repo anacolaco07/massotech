@@ -1,0 +1,65 @@
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+#conteudo {
+    background-color: #51B6B6;
+    padding: 20px;
+    margin-left: 200px;
+    height: 100%;
+    width: calc(100% - 200px);
+    box-sizing: border-box;
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#conteudo input[type="text"],
+#conteudo input[type="email"],
+#conteudo input[type="password"],
+#conteudo input[type="submit"],
+#conteudo a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    background: rgb(58, 125, 125);
+    color: #000;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    text-align: center;
+    font-family: inherit
+}
+
+#conteudo input[type="submit"]:hover,
+#conteudo a:hover {
+    background: #4d9e9e;
+}
+
+
+#menu-lateral {
+    background-color: #3A7D7D;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#menu-lateral a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+}
